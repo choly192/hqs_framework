@@ -1,13 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import RootRouter from '@/router/index';
 import './index.less';
 
-export const App = () => {
-  return (
-    <main className="system">
-      <h2>测试框架</h2>
-    </main>
-  );
-};
 
-ReactDOM.render(<App />, document.getElementById('root'));
+
+ReactDOM.render(<RootRouter />, document.getElementById('root'));
