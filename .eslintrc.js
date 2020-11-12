@@ -12,7 +12,9 @@ module.exports = {
   },
   plugins:["react","babel"],
   rules: {
-    "no-debugger": "off"
+    "no-debugger": "off",
+    'react/no-string-refs': 'off', // 关闭react的ref属性使用字符形式报警
+    'react/prop-types': 'off' 
   },
   extends: [
     'standard', // npm install --save-dev eslint-config-standard eslint-plugin-promise eslint-plugin-import eslint-plugin-node
@@ -23,23 +25,3 @@ module.exports = {
     'prettier/standard'
   ]
 }
-// {
-//   "root" :true,
-//   "parser":"babel-eslint",
-//   "env": {
-//     "browser": true,
-//     "node": true,
-//     "es6": true,
-//     "amd": true
-//   },
-//   "globals": {
-//     "environment": "readonly"
-//   },
-//   "plugins":["react"],
-//   "rules":{
-//     "indent": ["error",2], // 缩进2空格
-//     "semi": [2,"always"], // 语句结尾需要分号
-//     "no-console": "off",
-//     "no-debugger": "off"
-//   }
-// }

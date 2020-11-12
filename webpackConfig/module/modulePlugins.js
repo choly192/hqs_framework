@@ -10,6 +10,7 @@ const copyWebpackPlugin = require('copy-webpack-plugin'); // 从webpack中拷贝
 const OptimizeCss = require('optimize-css-assets-webpack-plugin'); // 压缩css
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'); // 可视化 打包体积和依赖关系的可视化
 const ESLintPlugin = require('eslint-webpack-plugin');
+const Webpackbar = require('webpackbar'); // 显示进度条 默认 绿色
 
 let modulePlugins = [
   new CleanWebpackPlugin(), // 每一次重新打包都会清除之前的dist文件
@@ -18,7 +19,10 @@ let modulePlugins = [
   }),
   new MiniCssExtractPlugin({
     filename: './static/css/[name]-[id].[chunkhash:8].bundle.css' // 指定打包后的css
-  })
+  }),
+  new Webpackbar({
+    color: 'pink'
+  }) 
 ];
 
 if (process.env.NODE_ENV === 'development') {
