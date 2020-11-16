@@ -21,7 +21,8 @@ module.exports = {
     extensions: ['.js'], // 自动解析确定的扩展
     alias: { // 创建别名
       '@': path.join(__dirname,'..','src'), // '@/common/。。'
-      static: path.join(__dirname, '..', '/src/static') // 指向静态资源目录
+      static: path.join(__dirname, '..', '/src/static'), // 指向静态资源目录
+      'react-dom': '@hot-loader/react-dom' // 该包支持对react Hook热更新
     }
   }
 }
