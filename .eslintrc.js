@@ -14,7 +14,8 @@ module.exports = {
   rules: {
     "no-debugger": "off",
     'react/no-string-refs': 'off', // 关闭react的ref属性使用字符形式报警
-    'react/prop-types': 'off' 
+    'react/prop-types': 'off' ,
+    'default-param-last': 'off'
   },
   extends: [
     'standard', // npm install --save-dev eslint-config-standard eslint-plugin-promise eslint-plugin-import eslint-plugin-node

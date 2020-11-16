@@ -1,4 +1,4 @@
 /**
  * 定义 action type
  */
-const TEST = 'TEST'; // 测试
+export const TEST = 'TEST'; // 测试

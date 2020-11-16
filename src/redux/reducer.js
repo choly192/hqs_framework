@@ -6,7 +6,7 @@ import { TEST } from './actionType';
 
 // 测试
 
-const changTest = (state = 0, action) => {
+const changTest = (state = null, action = {}) => {
   switch (action.type) {
     case TEST:
       return action.data;
@@ -15,6 +15,9 @@ const changTest = (state = 0, action) => {
   }
 };
 
+/**
+ * 状态集返回
+ */
 export default combineReducers({
   changTest
 });

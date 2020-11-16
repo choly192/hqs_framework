@@ -4,7 +4,7 @@
 # react项目框架
 ## 技术点
 - html、 css 、 less 、react 、 webpack 、 webpack-cli 、 babel 、 eslint 
- react-router、react-router-dom、react-router-config 
+ react-router、react-router-dom、react-router-config、redux、react-redux 
 
 ## 搭建步骤
  - 1. npm init  ---产生package.json文件
@@ -15,8 +15,15 @@
 
 ## 项目结构
 - src
+  - common
+    - tools
   - container
     - home.js
+  - redux
+    - action.js
+    - actionType.js
+    - reducer.js
+    - store.js
   - router
     - handle
       - handleRouter.js
