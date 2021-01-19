@@ -21,4 +21,23 @@ export const interceptionStr = (str, num, aim) => {
     default:
       break;
   }
-}
+};
+
+/**
+ * 计算剩余时间
+ */
+export const getTimeRemaining = endtime => {
+  // Date.parse()将时间字符串转换未毫秒值
+  const total = Date.parse(endtime) - Date.parse(new Date());
+  const seconds = Math.floor((total / 1000) % 60);
+  const minutes = Math.floor((total / 1000 / 60) % 24);
+  const hours = Math.floor((total / (1000 * 60 * 60)) % 24);
+  const days = Math.floor(total / (1000 * 60 * 60 * 24));
+  return {
+    total,
+    days,
+    hours,
+    minutes,
+    seconds
+  };
+};

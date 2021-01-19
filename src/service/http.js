@@ -5,15 +5,18 @@
 
 import axios from 'axios';
 /**
- * get请求 
+ * get请求
  */
 const getMethod = (url, options) => {
   const promise = new Promise((resolve, reject) => {
-    axios.get(url, options).then(response => {
-      resolve(response);
-    }).catch(error => {
-      reject(error);
-    });
+    axios
+      .get(url, options)
+      .then(response => {
+        resolve(response.data);
+      })
+      .catch(error => {
+        reject(error);
+      });
   });
   return promise;
 };
@@ -38,19 +41,21 @@ const optionMethod = (url, options) => {
       break;
     default:
       break;
-  };
+  }
   const bodyParams = setOptionMethodBody(options); // 转换body数据格式和类型
   const promise = new Promise((resolve, reject) => {
     axios({
       method: httpType,
       url,
       data: bodyParams
-    }).then(response => {
-      resolve(response);
-    }).catch(error => {
-      alert('系统异常，请联系管理员！');
-      reject(error);
-    });
+    })
+      .then(response => {
+        resolve(response.data);
+      })
+      .catch(error => {
+        alert('系统异常，请联系管理员！');
+        reject(error);
+      });
   });
   return promise;
 };
@@ -66,7 +71,7 @@ const setOptionMethodBody = options => {
       if (Object.prototype.toString.call(data[key]) === '[object Array]') {
         data[key].map(item => {
           formData.append(key, item);
-        })
+        });
       } else {
         formData.append(key, data);
       }
