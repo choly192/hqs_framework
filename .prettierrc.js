@@ -1,13 +1,15 @@
 module.exports = {
-  printWidth: 120,
-  semi: true, // Print semicolons at the ends of statements.
-  singleQuote: true,
-  trailingComma: 'none', // Print trailing commas wherever possible when multi-line.
-  bracketSpacing: true, // Print spaces between brackets in object literals.
-  jsxBracketSameLine: true,
-  arrowParens: 'avoid', // Include parentheses around a sole arrow function parameter.(Omit parens when possible.)
-  insertPragma: false,
-  tabWidth: 2,
-  useTabs: false, // Indent lines with tabs instead of spaces.
+  printWidth: 120, // 超过最大值换行
+  semi: true, // P句末添加分号
+  singleQuote: true, // 使用单引号代替双引号
+  trailingComma: 'none', // 在对象或者数组最后一个元素后面加逗号
+  bracketSpacing: true, // 在对象或者数组括号与元素之间加空格
+  jsxBracketSameLine: true, // 在jsx中把'>'是否单独放一行
+  jsxSingleQuote: false, // 在jsx中是否使用单引号代替双引号
+  arrowParens: 'avoid', // (x) => {} 箭头函数参数只有一个时是否要有小括号；'aviod'省略括号
+  insertPragma: false, //
+  ignorePath: ".prettierignore",// 不使用prettier格式化的文件填写在 .prettierignore文件中
+  tabWidth: 2, // 缩进的字节数
+  useTabs: false, // 缩进不使用tab使用空格
   endOfLine: 'auto'
 }
